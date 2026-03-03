@@ -1,7 +1,7 @@
 """
 test.py
 =======
-Environment and setup verification script for Arc Analysis M12.
+Environment and setup verification script for Arc Sensor Analysis.
 
 What this script does:
   1. Checks that Python 3.12 (or compatible) is in use.
@@ -131,7 +131,7 @@ def check_onedrive_outputs() -> bool:
     This is optional — warn but don't fail if it's missing.
     """
     outputs_path = os.path.join(
-        os.path.expanduser("~"), "OneDrive", "Projects", "Arc-Analysis-M12", "Outputs"
+        os.path.expanduser("~"), "OneDrive", "Projects", "arc-sensor-analysis", "Outputs"
     )
     exists = os.path.isdir(outputs_path)
     symbol = TICK if exists else f"{RED}!{RESET}"
@@ -147,7 +147,7 @@ def check_onedrive_outputs() -> bool:
 
 def main():
     print()
-    print(f"{BOLD}Arc Analysis M12 — Environment Check{RESET}")
+    print(f"{BOLD}Arc Sensor Analysis — Environment Check{RESET}")
     print("=" * 50)
 
     results = []

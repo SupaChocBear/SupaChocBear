@@ -1,4 +1,4 @@
-# Arc Analysis M12 — Work Log
+# Arc Sensor Analysis — Work Log
 
 **Project:** Arc event investigation, mileage marker M12, Up line
 **Analyst:** [Your name]

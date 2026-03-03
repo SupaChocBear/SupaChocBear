@@ -1,7 +1,7 @@
 """
 arc_monitor.py
 ==============
-Streamlit web dashboard for Arc Analysis M12.
+Streamlit web dashboard for Arc Sensor Analysis.
 
 What this script does:
   1. Lets you upload the sensor CSV file directly in the browser.

@@ -2,7 +2,7 @@
 report_generator.py
 ===================
 Export charts as PNG and generate a formatted Word document report
-for Arc Analysis M12.
+for Arc Sensor Analysis.
 
 What this script does:
   1. Reads the cleaned CSV (from the Outputs folder).
@@ -41,7 +41,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 # Where your cleaned CSV lives (produced by csv_cleaner.py or arc_monitor.py)
 ONEDRIVE_BASE = os.path.join(
-    os.path.expanduser("~"), "OneDrive", "Projects", "Arc-Analysis-M12"
+    os.path.expanduser("~"), "OneDrive", "Projects", "arc-sensor-analysis"
 )
 OUTPUTS_FOLDER = os.path.join(ONEDRIVE_BASE, "Outputs")
 REPORTS_FOLDER = os.path.join(ONEDRIVE_BASE, "Reports")
@@ -389,7 +389,7 @@ def build_report(df: pd.DataFrame, threshold: float, chart_paths: dict) -> str:
 
 def main():
     print("=" * 60)
-    print("  Arc Analysis M12 — Report Generator")
+    print("  Arc Sensor Analysis — Report Generator")
     print("=" * 60)
 
     # --- Load cleaned CSV ---

@@ -1,4 +1,4 @@
-# Arc Analysis M12 — Session Notes
+# Arc Sensor Analysis — Session Notes
 
 ---
 
@@ -11,7 +11,7 @@
 
 1. Created the project folder structure:
    ```
-   Arc-Analysis-M12/
+   arc-sensor-analysis/
    ├── 01-Raw-Data/        ← raw sensor CSVs go here (never edit originals)
    ├── 02-Scripts/         ← all Python scripts
    │   ├── csv_cleaner.py

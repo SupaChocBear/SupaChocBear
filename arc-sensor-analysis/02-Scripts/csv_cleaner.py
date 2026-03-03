@@ -1,7 +1,7 @@
 """
 csv_cleaner.py
 ==============
-CSV cleaner for pantograph monitoring system data — Arc Analysis M12.
+CSV cleaner for pantograph monitoring system data — Arc Sensor Analysis.
 
 Pantograph CSVs have a non-standard layout that plain pd.read_csv() cannot
 handle correctly.  This script deals with the following quirks automatically:
@@ -52,7 +52,7 @@ from tqdm import tqdm
 # Where to save the cleaned output.
 # Adjust to match your OneDrive path.
 ONEDRIVE_OUTPUTS = os.path.join(
-    os.path.expanduser("~"), "OneDrive", "Projects", "Arc-Analysis-M12", "Outputs"
+    os.path.expanduser("~"), "OneDrive", "Projects", "arc-sensor-analysis", "Outputs"
 )
 
 # How many rows to read at a time when processing large files.
@@ -662,12 +662,12 @@ def save_output(df: pd.DataFrame, original_filepath: str) -> str:
 def main():
     print()
     print("=" * 65)
-    print("  Pantograph Monitoring CSV Cleaner — Arc Analysis M12")
+    print("  Pantograph Monitoring CSV Cleaner — Arc Sensor Analysis")
     print("=" * 65)
 
     # ── Get the file path ─────────────────────────────────────────────────
     print("\nEnter the full path to your raw sensor CSV file.")
-    print(r"Example: C:\Users\YourName\Projects\Arc-Analysis-M12\01-Raw-Data\M12_run1.csv")
+    print(r"Example: C:\Users\YourName\Projects\arc-sensor-analysis\01-Raw-Data\M12_run1.csv")
     filepath = input("\nFile path: ").strip().strip('"').strip("'")
 
     if not os.path.isfile(filepath):
