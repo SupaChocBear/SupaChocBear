@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A fun personality quiz that reveals which Pokémon you are!" />
+  <title>Which Pokémon Are You?</title>
+  <link rel="preconnect" href="https://raw.githubusercontent.com" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="poke-bg" aria-hidden="true"></div>
+
+  <main class="app" id="app">
+    <!-- ===================== START SCREEN ===================== -->
+    <section class="screen screen--start is-active" id="screen-start">
+      <div class="pokeball-logo" aria-hidden="true">
+        <span class="pokeball-logo__btn"></span>
+      </div>
+      <h1 class="title">Which Pokémon Are&nbsp;You?</h1>
+      <p class="subtitle">
+        Answer a few questions about yourself and discover your inner Pokémon.
+        No two trainers are alike!
+      </p>
+      <button class="btn btn--primary" id="start-btn">Start Quiz</button>
+      <p class="credit">A personality quiz · 8 questions · ~2 minutes</p>
+    </section>
+
+    <!-- ===================== QUIZ SCREEN ===================== -->
+    <section class="screen screen--quiz" id="screen-quiz" hidden>
+      <header class="quiz-head">
+        <div class="progress" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="progress__bar" id="progress-bar"></div>
+        </div>
+        <p class="quiz-counter" id="quiz-counter">Question 1 of 8</p>
+      </header>
+
+      <h2 class="question" id="question-text">Question goes here</h2>
+      <div class="answers" id="answers"></div>
+
+      <div class="quiz-nav">
+        <button class="btn btn--ghost" id="back-btn">← Back</button>
+      </div>
+    </section>
+
+    <!-- ===================== RESULT SCREEN ===================== -->
+    <section class="screen screen--result" id="screen-result" hidden>
+      <p class="result-eyebrow">You are…</p>
+      <div class="result-card" id="result-card">
+        <div class="result-sprite-wrap">
+          <img class="result-sprite" id="result-sprite" alt="" width="180" height="180" />
+        </div>
+        <h2 class="result-name" id="result-name">Pokémon</h2>
+        <div class="result-types" id="result-types"></div>
+        <p class="result-blurb" id="result-blurb"></p>
+        <div class="result-matches" id="result-matches"></div>
+      </div>
+      <div class="result-actions">
+        <button class="btn btn--primary" id="retry-btn">Take it again</button>
+        <button class="btn btn--ghost" id="share-btn">Share result</button>
+      </div>
+      <p class="share-status" id="share-status" role="status"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made for fun · Pokémon and Pokémon sprites are © Nintendo / Game Freak / The Pokémon Company. This is an unofficial fan project.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
